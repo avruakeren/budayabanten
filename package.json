@@ -1,0 +1,27 @@
+{
+  "name": "teh-mela",
+  "version": "1.0.0",
+  "description": "Jelajah Budaya Banten — game petualangan edukatif budaya Banten.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": ["banten", "budaya", "game", "edukasi", "react", "vite"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "framer-motion": "^14.11.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "autoprefixer": "^10.6.2",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^3.4.19",
+    "vite": "^8.3.7"
+  }
+}
