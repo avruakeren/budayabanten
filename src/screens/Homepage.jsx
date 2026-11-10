@@ -44,8 +44,8 @@ export function Homepage() {
           </h1>
 
           <p className="mt-7 max-w-lg text-pretty text-base leading-relaxed text-muted sm:text-lg">
-            Empat wilayah, empat cerita. Telusuri Serang, Baduy, Ujung Kulon, dan Cilegon lewat
-            dialog singkat serta mini-game.
+            Delapan wilayah, delapan cerita. Telusuri Serang, Baduy, Ujung Kulon, Cilegon, hingga
+            pesisir Tangerang lewat dialog singkat serta mini-game.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">

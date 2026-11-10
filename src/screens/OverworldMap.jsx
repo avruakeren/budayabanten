@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useGameState } from '../hooks/useGameState';
 import { REGIONS } from '../data/regions';
+import { CODEX_CARDS } from '../data/codexCards';
 import { audio } from '../lib/audio';
 import { Stars } from '../components/ui/Stars';
 import { Toast } from '../components/ui/Toast';
@@ -65,7 +66,8 @@ export function OverworldMap({ onOpenCodex }) {
       </header>
 
       <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
-        Pilih wilayah yang tersedia. Setiap wilayah berisi dialog dan satu mini-game.
+        Pilih wilayah yang tersedia. Beberapa mini-game masih disiapkan, tetapi kartu budayanya tetap
+        bisa dikumpulkan.
       </p>
 
       {nextRegion && !allComplete ? (
@@ -79,6 +81,7 @@ export function OverworldMap({ onOpenCodex }) {
           const status = statusOf(region, completedRegions, unlockedRegions);
           const locked = status === 'locked';
           const completed = status === 'completed';
+          const comingSoon = region.minigame === 'coming-soon';
 
           return (
             <li key={region.id} className="border-b border-line">
@@ -89,7 +92,13 @@ export function OverworldMap({ onOpenCodex }) {
                   locked ? 'cursor-not-allowed opacity-55' : 'hover:text-accent'
                 }`}
                 aria-label={`${region.title} — ${
-                  locked ? 'terkunci' : completed ? 'selesai' : 'tersedia'
+                  locked
+                    ? 'terkunci'
+                    : completed
+                      ? 'selesai'
+                      : comingSoon
+                        ? 'tersedia, mini-game segera hadir'
+                        : 'tersedia'
                 }`}
               >
                 <span className="w-6 shrink-0 text-[11px] font-medium tabular-nums text-muted">
@@ -116,7 +125,7 @@ export function OverworldMap({ onOpenCodex }) {
                   ) : (
                     <>
                       <span className="hidden text-[10px] uppercase tracking-[0.1em] text-accent sm:inline">
-                        Tersedia
+                        {comingSoon ? 'Segera hadir' : 'Tersedia'}
                       </span>
                       <ArrowRightIcon className="h-4 w-4 text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-accent" />
                     </>
@@ -129,7 +138,7 @@ export function OverworldMap({ onOpenCodex }) {
       </ul>
 
       <div className="mt-6 flex flex-wrap items-center justify-between gap-2 text-[11px] text-muted">
-        <span>{collectedCards.length} dari 4 kartu terkumpul</span>
+        <span>{collectedCards.length} dari {CODEX_CARDS.length} kartu terkumpul</span>
         <span>Ketuk wilayah untuk mulai</span>
       </div>
 
@@ -137,7 +146,7 @@ export function OverworldMap({ onOpenCodex }) {
         <div className="panel mt-8 p-5">
           <p className="font-display text-lg font-semibold text-ink">Semua wilayah selesai</p>
           <p className="mt-1.5 max-w-md text-sm leading-relaxed text-muted">
-            Empat kisah telah kamu dengarkan. Kartu budaya tersimpan di Album Budaya.
+            {totalRegions} kisah telah kamu dengarkan. Semua kartu budaya tersimpan di Album Budaya.
           </p>
           <Button onClick={onOpenCodex} className="mt-4" trailing={<ArrowRightIcon className="h-4 w-4" />}>
             Buka Album

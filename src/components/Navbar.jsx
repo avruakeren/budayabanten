@@ -1,4 +1,5 @@
 import { useGameState } from '../hooks/useGameState';
+import { CODEX_CARDS } from '../data/codexCards';
 import { audio } from '../lib/audio';
 import { BookIcon, MuteIcon, VolumeIcon } from './Icons';
 
@@ -47,11 +48,11 @@ export function Navbar({ onOpenCodex }) {
               onOpenCodex();
             }}
             className="inline-flex h-9 items-center gap-2 rounded-md px-2.5 text-xs font-medium text-muted transition-colors hover:bg-line/60 hover:text-ink"
-            aria-label={`Buka album budaya, ${collectedCards.length} dari 4 kartu terkumpul`}
+            aria-label={`Buka album budaya, ${collectedCards.length} dari ${CODEX_CARDS.length} kartu terkumpul`}
           >
             <BookIcon className="h-4 w-4" />
             <span className="hidden sm:inline">Album</span>
-            <span className="tabular-nums text-ink">{collectedCards.length}/4</span>
+            <span className="tabular-nums text-ink">{collectedCards.length}/{CODEX_CARDS.length}</span>
           </button>
         </div>
       </nav>

@@ -3,8 +3,9 @@ import { Stars } from './ui/Stars';
 import { Button } from './ui/Button';
 import { ArrowRightIcon } from './Icons';
 
-export function GameResult({ region, card, stars = 3, scoreLabel = '', onFinish }) {
+export function GameResult({ region, card, stars = 3, scoreLabel = '', ratingLabel = '', onFinish }) {
   const isFinalRegion = region.order === REGIONS.length;
+  const rating = ratingLabel || (stars === 3 ? 'Sempurna' : stars === 2 ? 'Baik' : 'Terus belajar');
 
   return (
     <div className="flex min-h-[100dvh] flex-col justify-center pb-12 pt-24">
@@ -17,9 +18,7 @@ export function GameResult({ region, card, stars = 3, scoreLabel = '', onFinish 
 
         <div className="mt-5 flex items-center gap-3">
           <Stars value={stars} size="h-5 w-5" />
-          <span className="text-[11px] uppercase tracking-[0.12em] text-muted">
-            {stars === 3 ? 'Sempurna' : stars === 2 ? 'Baik' : 'Terus belajar'}
-          </span>
+          <span className="text-[11px] uppercase tracking-[0.12em] text-muted">{rating}</span>
         </div>
 
         <div className="panel mt-8 p-5">
@@ -30,7 +29,7 @@ export function GameResult({ region, card, stars = 3, scoreLabel = '', onFinish 
 
         <p className="mt-5 text-xs leading-relaxed text-muted">
           {isFinalRegion
-            ? 'Seluruh wilayah telah selesai. Empat kartu budaya tersimpan di Album Budaya.'
+            ? 'Seluruh wilayah telah selesai. Semua kartu budaya tersimpan di Album Budaya.'
             : 'Wilayah berikutnya telah terbuka di peta. Kartu dapat dibaca lewat Album Budaya.'}
         </p>
 

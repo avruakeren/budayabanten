@@ -7,12 +7,14 @@ import { SerangQuiz } from './minigames/SerangQuiz';
 import { BaduySort } from './minigames/BaduySort';
 import { PandeglangMemory } from './minigames/PandeglangMemory';
 import { CilegonSimon } from './minigames/CilegonSimon';
+import { ComingSoon } from './minigames/ComingSoon';
 
 const GAMES = {
   quiz: SerangQuiz,
   sort: BaduySort,
   memory: PandeglangMemory,
   rhythm: CilegonSimon,
+  'coming-soon': ComingSoon,
 };
 
 export function MinigameScreen() {

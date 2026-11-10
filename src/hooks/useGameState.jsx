@@ -2,8 +2,8 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useReducer,
 import { REGION_ORDER } from '../data/regions';
 import { CODEX_CARDS } from '../data/codexCards';
 
-const SAVE_KEY = 'jbb:save:v1';
-const SAVE_VERSION = 1;
+const SAVE_KEY = 'jbb:save:v2';
+const SAVE_VERSION = 2;
 const CARD_IDS = CODEX_CARDS.map((card) => card.id);
 
 export const BASE_STATE = {
