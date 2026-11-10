@@ -62,7 +62,7 @@ export function Homepage() {
       className="relative min-h-[100dvh] overflow-hidden"
       onPointerMove={handlePointerMove}
     >
-      {/* Background layer: foto + Ken Burns + parallax + overlay harmonis */}
+      {/* Background layer: foto + Ken Burns + parallax + overlay editorial */}
       <motion.div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 overflow-hidden"
@@ -72,35 +72,29 @@ export function Homepage() {
           src="/assets/backgrounds/pandeglang.webp"
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
-          style={{ filter: 'saturate(0.55) brightness(0.85)' }}
+          style={{ filter: 'saturate(0.4) brightness(0.92)' }}
           loading="eager"
           decoding="async"
           initial={{ scale: 1, x: 0, y: 0 }}
           animate={
             reduceMotion
               ? { scale: 1, x: 0, y: 0 }
-              : { scale: [1, 1.08, 1], x: [0, -16, 0], y: [0, -10, 0] }
+              : { scale: [1, 1.06, 1], x: [0, -12, 0], y: [0, -8, 0] }
           }
           transition={
             reduceMotion
               ? { duration: 0 }
-              : { duration: 26, repeat: Infinity, ease: 'easeInOut' }
+              : { duration: 28, repeat: Infinity, ease: 'easeInOut' }
           }
         />
-        {/* Overlay paper-tint untuk harmoni dengan palet app */}
-        <div className="absolute inset-0 bg-paper/55" />
-        <div className="absolute inset-0 bg-gradient-to-b from-paper/40 via-transparent to-ink/35" />
-        <div className="absolute inset-0 bg-gradient-to-r from-paper/30 via-transparent to-transparent" />
+        {/* Overlay: kiri (tempat teks) paper, kanan foto terlihat */}
+        <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/85 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-paper/30 via-transparent to-paper/40" />
       </motion.div>
 
-      {/* Konten utama dalam panel paper */}
-      <div className="relative mx-auto flex min-h-[100dvh] w-full max-w-5xl flex-col items-center justify-center px-5 py-12 sm:py-16">
-        <motion.div
-          initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: EASE }}
-          className="w-full max-w-2xl rounded-2xl border border-line/70 bg-surface/90 p-8 shadow-[0_24px_60px_-30px_rgba(27,25,22,0.35)] backdrop-blur-md sm:p-12"
-        >
+      {/* Konten editorial langsung di atas background, tanpa panel/card */}
+      <div className="relative mx-auto flex min-h-[100dvh] w-full max-w-5xl flex-col px-5 pb-8 pt-12 sm:pt-16">
+        <div className="flex flex-1 flex-col justify-center py-14">
           <Reveal delay={0} reduceMotion={reduceMotion}>
             <p className="eyebrow">Delapan Wilayah · Delapan Cerita</p>
           </Reveal>
@@ -123,7 +117,7 @@ export function Homepage() {
           </Reveal>
 
           <Reveal delay={0.18} reduceMotion={reduceMotion}>
-            <p className="mt-7 max-w-lg text-pretty text-base leading-relaxed text-muted sm:text-lg">
+            <p className="mt-7 max-w-md text-pretty text-base leading-relaxed text-muted sm:text-lg">
               Ada 8 wilayah seru menantimu! Dengarkan ceritanya, mainkan mini-game-nya, dan
               kumpulkan kartu budaya. Ayo mulai petualanganmu!
             </p>
@@ -156,10 +150,10 @@ export function Homepage() {
             </div>
           </Reveal>
 
-          <p className="mt-8 text-center text-[10px] leading-relaxed text-muted/60">
+          <p className="mt-12 text-[10px] leading-relaxed text-muted/60">
             Aset visual: Fantasy Forests &amp; sprites by judas la carotte (penggunaan personal).
           </p>
-        </motion.div>
+        </div>
       </div>
 
       <Modal
