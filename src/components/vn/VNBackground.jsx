@@ -396,6 +396,22 @@ const SCENES = {
 export function VNBackground({ region }) {
   const sky = SKIES[region?.id] ?? SKIES.serang;
   const Scene = SCENES[region?.id] ?? SerangScene;
+  const bg = region?.background;
+
+  if (bg) {
+    return (
+      <div className="absolute inset-0" aria-hidden="true">
+        <img
+          src={`/assets/backgrounds/${bg}`}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="eager"
+          decoding="async"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-paper/20" />
+      </div>
+    );
+  }
 
   return (
     <svg

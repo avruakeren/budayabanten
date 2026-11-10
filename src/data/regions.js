@@ -23,6 +23,7 @@ export const REGIONS = [
     accentSoft: '#E8C766',
     position: { x: 50, y: 34 },
     cardId: 'ki-amuk',
+    background: 'serang.webp',
     minigame: 'quiz',
     dialog: [
       {
@@ -38,9 +39,9 @@ export const REGIONS = [
         text: 'Selamat datang, Nak. Kau berdiri di tanah yang pernah menjadi pintu Nusantara. Rempah, kain, dan kabar dari negeri jauh bertemu di sini, lalu berpencar lagi ke seluruh dunia.',
       },
       {
-        speaker: 'Mela',
+        speaker: 'Arka',
         role: 'Musafir muda',
-        portrait: 'mela',
+        portrait: 'arka',
         text: 'Aki meninggalkan buku untukku. Di halaman pertama ia menggambar menara dan meriam, lalu menulis: ‘Dua benda ini menyimpan suara masa lalu.’',
       },
       {
@@ -53,12 +54,12 @@ export const REGIONS = [
         speaker: 'Aki Wira',
         role: 'Ingatan yang tinggal di batu dan lagu',
         portrait: 'aki',
-        text: 'Dan Ki Amuk bukan sekadar meriam, Mela. Ia pernah melihat layar Tiongkok, Arab, Portugis, dan Belanda berebut tempat di dermaga. Besi tidak berbicara, tetapi ia mengingat.',
+        text: 'Dan Ki Amuk bukan sekadar meriam, Arka. Ia pernah melihat layar Tiongkok, Arab, Portugis, dan Belanda berebut tempat di dermaga. Besi tidak berbicara, tetapi ia mengingat.',
       },
       {
-        speaker: 'Mela',
+        speaker: 'Arka',
         role: 'Musafir muda',
-        portrait: 'mela',
+        portrait: 'arka',
         text: 'Kalau begitu aku harus mendengarnya pelan-pelan. Mulai dari halaman pertama, Pak Hasan.',
       },
     ],
@@ -76,13 +77,14 @@ export const REGIONS = [
     accentSoft: '#C9B36B',
     position: { x: 62, y: 22 },
     cardId: 'pulau-dua',
+    background: 'serang-kab.webp',
     minigame: 'coming-soon',
     dialog: [
       {
         speaker: 'Narator',
         role: 'Sawah di kaki Gunung Karang',
         portrait: 'narrator',
-        text: 'Pagi masih muda ketika Mela meninggalkan kota. Sawah membentang di kiri jalan, dan di kejauhan Gunung Karang berdiri tenang. Seorang petani menuntun kerbau menyusuri pematang.',
+        text: 'Pagi masih muda ketika Arka meninggalkan kota. Sawah membentang di kiri jalan, dan di kejauhan Gunung Karang berdiri tenang. Seorang petani menuntun kerbau menyusuri pematang.',
       },
       {
         speaker: 'Pak Umar',
@@ -91,9 +93,9 @@ export const REGIONS = [
         text: 'Bukan hanya keraton yang menyimpan cerita, Nak. Tanah ini sudah ditanami jauh sebelum kapal-kapal asing datang. Padi, lada, dan air adalah kekayaan pertama Banten.',
       },
       {
-        speaker: 'Mela',
+        speaker: 'Arka',
         role: 'Musafir muda',
-        portrait: 'mela',
+        portrait: 'arka',
         text: 'Aki menulis tentang sebuah pulau kecil di pesisir utara. Katanya, setiap tahun ribuan burung datang ke sana, seolah Banten masih punya tamu yang setia.',
       },
       {
@@ -106,7 +108,7 @@ export const REGIONS = [
         speaker: 'Aki Wira',
         role: 'Ingatan yang tinggal di batu dan lagu',
         portrait: 'aki',
-        text: 'Yang menjaga tanah, juga menjaga yang singgah. Ingat itu, Mela.',
+        text: 'Yang menjaga tanah, juga menjaga yang singgah. Ingat itu, Arka.',
       },
       {
         speaker: 'Pak Umar',
@@ -129,6 +131,7 @@ export const REGIONS = [
     accentSoft: '#A8C29A',
     position: { x: 70, y: 58 },
     cardId: 'tenun-baduy',
+    background: 'lebak.webp',
     minigame: 'sort',
     dialog: [
       {
@@ -144,9 +147,9 @@ export const REGIONS = [
         text: 'Selamat datang di Kanekes. Di sini kami tidak mengejar banyak; kami menjaga yang sudah ada—tanah, air, hutan, dan hubungan kami dengan leluhur.',
       },
       {
-        speaker: 'Mela',
+        speaker: 'Arka',
         role: 'Musafir muda',
-        portrait: 'mela',
+        portrait: 'arka',
         text: 'Aki menulis bahwa Baduy punya aturan yang tidak tercatat di buku, tetapi terbaca di setiap langkah orangnya.',
       },
       {
@@ -182,6 +185,7 @@ export const REGIONS = [
     accentSoft: '#9DB98A',
     position: { x: 42, y: 72 },
     cardId: 'badak-jawa',
+    background: 'pandeglang.webp',
     minigame: 'memory',
     dialog: [
       {
@@ -197,9 +201,9 @@ export const REGIONS = [
         text: 'Kau datang di jam yang tepat. Di balik hutan ini hidup salah satu makhluk paling langka di bumi—badak jawa.',
       },
       {
-        speaker: 'Mela',
+        speaker: 'Arka',
         role: 'Musafir muda',
-        portrait: 'mela',
+        portrait: 'arka',
         text: 'Aki menulis, di sini hutan menjaga laut dan laut menjaga hutan. Aku belum pernah membaca kalimat seaneh itu.',
       },
       {
@@ -212,7 +216,7 @@ export const REGIONS = [
         speaker: 'Aki Wira',
         role: 'Ingatan yang tinggal di batu dan lagu',
         portrait: 'aki',
-        text: 'Kekayaan tidak selalu berupa emas, Mela. Kadang ia berjalan pelan dengan satu cula di hidungnya.',
+        text: 'Kekayaan tidak selalu berupa emas, Arka. Kadang ia berjalan pelan dengan satu cula di hidungnya.',
       },
       {
         speaker: 'Kak Nia',
@@ -235,6 +239,7 @@ export const REGIONS = [
     accentSoft: '#E0A08A',
     position: { x: 28, y: 42 },
     cardId: 'gipang',
+    background: 'cilegon.webp',
     minigame: 'rhythm',
     dialog: [
       {
@@ -250,9 +255,9 @@ export const REGIONS = [
         text: 'Dari Merak sampai Cisadane, pesisir ini tidak pernah benar-benar tidur. Kapal, pedagang, dan bunyi musik bercampur jadi satu.',
       },
       {
-        speaker: 'Mela',
+        speaker: 'Arka',
         role: 'Musafir muda',
-        portrait: 'mela',
+        portrait: 'arka',
         text: 'Aki bilang budaya Banten tidak pernah diam. Ia bergerak bersama angin laut.',
       },
       {
@@ -265,7 +270,7 @@ export const REGIONS = [
         speaker: 'Aki Wira',
         role: 'Ingatan yang tinggal di batu dan lagu',
         portrait: 'aki',
-        text: 'Dengarkan nadanya, Mela. Setiap wilayah adalah satu baris lagu. Kini saatnya kau menulis baris berikutnya.',
+        text: 'Dengarkan nadanya, Arka. Setiap wilayah adalah satu baris lagu. Kini saatnya kau menulis baris berikutnya.',
       },
       {
         speaker: 'Kang Darma',
@@ -288,6 +293,7 @@ export const REGIONS = [
     accentSoft: '#D89A76',
     position: { x: 78, y: 30 },
     cardId: 'cokek',
+    background: 'tangerang.webp',
     minigame: 'coming-soon',
     dialog: [
       {
@@ -303,9 +309,9 @@ export const REGIONS = [
         text: 'Tangerang tumbuh dari sungai, Nak. Cisadane mengantar dagangan, orang, dan cerita. Sampai sekarang, pasar ini masih menjadi jantungnya.',
       },
       {
-        speaker: 'Mela',
+        speaker: 'Arka',
         role: 'Musafir muda',
-        portrait: 'mela',
+        portrait: 'arka',
         text: 'Aki menggambar selendang panjang di halaman berikutnya. Di bawahnya ada satu nama: Cokek.',
       },
       {
@@ -318,7 +324,7 @@ export const REGIONS = [
         speaker: 'Aki Wira',
         role: 'Ingatan yang tinggal di batu dan lagu',
         portrait: 'aki',
-        text: 'Kota yang ramai pun bisa menyimpan lagu, Mela. Asal kau berhenti sebentar untuk mendengarnya.',
+        text: 'Kota yang ramai pun bisa menyimpan lagu, Arka. Asal kau berhenti sebentar untuk mendengarnya.',
       },
       {
         speaker: 'Ibu Lili',
@@ -341,6 +347,7 @@ export const REGIONS = [
     accentSoft: '#9DB2BD',
     position: { x: 88, y: 42 },
     cardId: 'gambang-kromong',
+    background: 'tangsel.webp',
     minigame: 'coming-soon',
     dialog: [
       {
@@ -356,9 +363,9 @@ export const REGIONS = [
         text: 'Orang mengira Tangerang Selatan hanya beton dan jalan tol. Padahal di sini masih ada lenong, gambang kromong, dan orang-orang yang merawatnya.',
       },
       {
-        speaker: 'Mela',
+        speaker: 'Arka',
         role: 'Musafir muda',
-        portrait: 'mela',
+        portrait: 'arka',
         text: 'Aki bilang, tradisi tidak hilang selama masih ada yang memainkannya.',
       },
       {
@@ -371,7 +378,7 @@ export const REGIONS = [
         speaker: 'Aki Wira',
         role: 'Ingatan yang tinggal di batu dan lagu',
         portrait: 'aki',
-        text: 'Dengarkan baik-baik, Mela. Di tengah kota yang bergerak cepat, lagu lama justru yang paling sabar menunggu.',
+        text: 'Dengarkan baik-baik, Arka. Di tengah kota yang bergerak cepat, lagu lama justru yang paling sabar menunggu.',
       },
       {
         speaker: 'Bang Mamat',
@@ -394,13 +401,14 @@ export const REGIONS = [
     accentSoft: '#97B39F',
     position: { x: 88, y: 62 },
     cardId: 'sate-bandeng',
+    background: 'tangerang-kab.webp',
     minigame: 'coming-soon',
     dialog: [
       {
         speaker: 'Narator',
         role: 'Tambak di pesisir utara',
         portrait: 'narrator',
-        text: 'Menjelang sore, tambak-tambak di pesisir utara berkilau seperti cermin. Bau tanah dan ikan membawa Mela ke sebuah rumah makan kecil di tepi jalan.',
+        text: 'Menjelang sore, tambak-tambak di pesisir utara berkilau seperti cermin. Bau tanah dan ikan membawa Arka ke sebuah rumah makan kecil di tepi jalan.',
       },
       {
         speaker: 'Pak Entis',
@@ -409,9 +417,9 @@ export const REGIONS = [
         text: 'Dari tambak ini ikan bandeng datang, Nak. Dulu orang hanya membakarnya. Sekarang, dagingnya dicacah, dibumbui, lalu dimasukkan lagi ke kulitnya.',
       },
       {
-        speaker: 'Mela',
+        speaker: 'Arka',
         role: 'Musafir muda',
-        portrait: 'mela',
+        portrait: 'arka',
         text: 'Jadi sate bandeng itu... ikan yang kembali ke rumahnya sendiri?',
       },
       {
@@ -424,7 +432,7 @@ export const REGIONS = [
         speaker: 'Aki Wira',
         role: 'Ingatan yang tinggal di batu dan lagu',
         portrait: 'aki',
-        text: 'Kuliner juga ingatan, Mela. Setiap suapan bisa membawa kita pulang.',
+        text: 'Kuliner juga ingatan, Arka. Setiap suapan bisa membawa kita pulang.',
       },
       {
         speaker: 'Pak Entis',
@@ -447,21 +455,21 @@ export const PROLOGUE = {
       text: 'Senja turun di Pelabuhan Karangantu. Angin laut membawa bau garam, cengkih, dan sesuatu yang lebih tua dari keduanya. Di beranda rumah panggung, sebuah buku catatan tua terbuka sendiri, halamannya bergerak pelan seperti bernapas.',
     },
     {
-      speaker: 'Mela',
+      speaker: 'Arka',
       role: 'Musafir muda',
-      portrait: 'mela',
+      portrait: 'arka',
       text: 'Buku Aki tinggal separuh. Halaman terakhirnya hanya berisi peta Banten dan satu kalimat yang ditulis miring: ‘Jangan hanya melihat—dengarkan.’',
     },
     {
       speaker: 'Aki Wira',
       role: 'Ingatan yang tinggal di batu dan lagu',
       portrait: 'aki',
-      text: 'Kau datang juga, Mela. Aku menunggumu di setiap penjuru tanah ini, di setiap batu yang belum sempat kau sentuh.',
+      text: 'Kau datang juga, Arka. Aku menunggumu di setiap penjuru tanah ini, di setiap batu yang belum sempat kau sentuh.',
     },
     {
-      speaker: 'Mela',
+      speaker: 'Arka',
       role: 'Musafir muda',
-      portrait: 'mela',
+      portrait: 'arka',
       text: 'Aki? Suaramu... seperti datang dari dalam buku.',
     },
     {
@@ -477,9 +485,9 @@ export const PROLOGUE = {
       text: 'Bawa buku itu. Delapan penjuru Banten menunggu: Serang, Kanekes, Ujung Kulon, Cilegon, hingga pesisir Tangerang. Kumpulkan kisahnya, dan halaman yang kosong akan selesai dengan sendirinya.',
     },
     {
-      speaker: 'Mela',
+      speaker: 'Arka',
       role: 'Musafir muda',
-      portrait: 'mela',
+      portrait: 'arka',
       text: 'Baik, Aki. Aku mulai dari Serang—dari gerbang kesultanan.',
     },
   ],

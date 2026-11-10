@@ -3,7 +3,7 @@ const PAPER = '#F7F5F0';
 const ACCENT = '#B4552D';
 
 const CHARACTERS = {
-  mela: {
+  arka: {
     skin: '#E7C09A',
     shade: '#D9AB80',
     hair: '#2A1F18',
@@ -105,7 +105,7 @@ const CHARACTERS = {
 };
 
 const SPEAKERS = {
-  Mela: 'mela',
+  Arka: 'arka',
   'Aki Wira': 'aki',
   'Pak Hasan': 'hasan',
   'Kokolot Jaro': 'jaro',
@@ -241,8 +241,28 @@ function beard(character) {
   );
 }
 
-export function VNPortrait({ speaker, portrait, className = '' }) {
-  const key = SPEAKERS[speaker] ?? (portrait === 'mela' || portrait === 'aki' ? portrait : 'guide');
+function spriteKey(speaker, portrait) {
+  if (portrait === 'arka') return 'arka';
+  if (portrait === 'aki') return 'aki';
+  if (speaker === 'Pak Hasan') return 'hasan';
+  if (portrait === 'guide') return 'tokoh';
+  return null;
+}
+
+export function VNPortrait({ speaker, portrait, emotion = 'happy', className = '' }) {
+  const key = SPEAKERS[speaker] ?? (portrait === 'arka' || portrait === 'aki' ? portrait : 'guide');
+  const sprite = spriteKey(speaker, portrait);
+  if (sprite) {
+    return (
+      <img
+        src={`/assets/sprites/${sprite}-${emotion}.webp`}
+        alt={`Potret ${speaker ?? 'tokoh'}`}
+        className={`${className} object-contain`}
+        loading="eager"
+        decoding="async"
+      />
+    );
+  }
   const character = CHARACTERS[key] ?? CHARACTERS.guide;
   const { skin, shade, outfit, collar, ghost } = character;
 
@@ -304,6 +324,6 @@ export function VNPortrait({ speaker, portrait, className = '' }) {
 }
 
 export function portraitSide(speaker, portrait) {
-  const key = SPEAKERS[speaker] ?? (portrait === 'mela' || portrait === 'aki' ? portrait : 'guide');
+  const key = SPEAKERS[speaker] ?? (portrait === 'arka' || portrait === 'aki' ? portrait : 'guide');
   return CHARACTERS[key]?.side ?? 'right';
 }

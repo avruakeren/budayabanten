@@ -59,6 +59,7 @@ export function VNStage({ region, line, completed = false, stars = 0, onBack, ch
                 <VNPortrait
                   speaker={line?.speaker}
                   portrait={line?.portrait}
+                  emotion={line?.emotion ?? 'happy'}
                   className="h-[min(34vh,300px)] w-auto max-w-[62vw] sm:h-[min(48vh,430px)] sm:max-w-none"
                 />
               </motion.div>
