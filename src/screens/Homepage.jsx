@@ -4,7 +4,7 @@ import { useGameState } from '../hooks/useGameState';
 import { audio } from '../lib/audio';
 import { Modal } from '../components/ui/Modal';
 import { Button } from '../components/ui/Button';
-import { BantenBackdrop } from '../components/BantenBackdrop';
+// BantenBackdrop diganti dengan background aset pandeglang.webp
 import { ArrowRightIcon } from '../components/Icons';
 
 const EASE = [0.22, 1, 0.36, 1];
@@ -65,10 +65,30 @@ export function Homepage() {
     >
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 overflow-hidden"
         style={{ x: backdropX, y: backdropY }}
       >
-        <BantenBackdrop className="absolute right-0 bottom-0 h-[min(46vh,400px)] w-[min(46vh,400px)] translate-x-[10%] text-ink [mask-image:linear-gradient(to_right,transparent_2%,black_46%)] sm:top-1/2 sm:bottom-auto sm:h-[min(74vh,720px)] sm:w-[min(74vh,720px)] sm:-translate-y-1/2 sm:translate-x-[8%]" />
+        <motion.img
+          src="/assets/backgrounds/pandeglang.webp"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="eager"
+          decoding="async"
+          initial={reduceMotion ? { scale: 1, x: 0, y: 0 } : { scale: 1, x: 0, y: 0 }}
+          animate={
+            reduceMotion
+              ? { scale: 1, x: 0, y: 0 }
+              : { scale: [1, 1.08, 1], x: [0, -14, 0], y: [0, -10, 0] }
+          }
+          transition={
+            reduceMotion
+              ? { duration: 0 }
+              : { duration: 24, repeat: Infinity, ease: 'easeInOut' }
+          }
+          style={{ transformOrigin: 'center center' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-paper/65 via-paper/15 to-ink/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-paper/40 via-transparent to-transparent" />
       </motion.div>
 
       <div className="relative mx-auto flex min-h-[100dvh] w-full max-w-5xl flex-col px-5 pb-8 pt-12 sm:pt-16">
