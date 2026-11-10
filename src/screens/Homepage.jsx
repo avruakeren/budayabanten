@@ -150,9 +150,6 @@ export function Homepage() {
             </div>
           </Reveal>
 
-          <p className="mt-12 text-[10px] leading-relaxed text-muted/60">
-            Aset visual: Fantasy Forests &amp; sprites by judas la carotte (penggunaan personal).
-          </p>
         </div>
       </div>
 
