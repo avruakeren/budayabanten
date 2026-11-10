@@ -19,8 +19,9 @@ export function Button({
   return (
     <motion.button
       type={type}
+      whileHover={{ y: -1 }}
       whileTap={{ scale: 0.99 }}
-      className={`${VARIANTS[variant] ?? VARIANTS.primary} ${className}`}
+      className={`${VARIANTS[variant] ?? VARIANTS.primary} group ${className}`}
       {...props}
     >
       {icon}
