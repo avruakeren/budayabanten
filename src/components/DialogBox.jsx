@@ -10,6 +10,7 @@ export function DialogBox({
   onNext,
   onSkip,
   skipLabel = 'Lewati',
+  variant = 'default',
   className = '',
 }) {
   const reduceMotion = useReducedMotion();
@@ -19,7 +20,8 @@ export function DialogBox({
   });
 
   const isLast = index >= total - 1;
-  const isNarration = line?.portrait === 'narrator';
+  const isNarration = line?.portrait === 'narrator' || line?.speaker === 'Narator';
+  const isVn = variant === 'vn';
 
   const advance = () => {
     if (!done) {
@@ -48,7 +50,18 @@ export function DialogBox({
   return (
     <section onClick={advance} aria-live="polite" className={`cursor-pointer ${className}`}>
       <div className="flex items-baseline justify-between gap-4 border-b border-line pb-3">
-        {isNarration ? (
+        {isVn ? (
+          isNarration ? (
+            <p className="eyebrow">{line?.role}</p>
+          ) : (
+            <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+              <span className="rounded-sm bg-accent px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-paper">
+                {line?.speaker}
+              </span>
+              <span className="text-[10px] uppercase tracking-[0.14em] text-muted">{line?.role}</span>
+            </div>
+          )
+        ) : isNarration ? (
           <p className="eyebrow">{line?.role}</p>
         ) : (
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
@@ -64,9 +77,9 @@ export function DialogBox({
       </div>
 
       <p
-        className={`mt-6 min-h-[7rem] text-pretty font-display text-[17px] leading-[1.85] sm:min-h-[6rem] sm:text-[19px] ${
-          isNarration ? 'italic text-muted' : 'text-ink/90'
-        }`}
+        className={`mt-6 min-h-[7rem] text-pretty font-display leading-[1.85] sm:min-h-[6rem] ${
+          isVn ? 'text-[18px] sm:text-[21px]' : 'text-[17px] sm:text-[19px]'
+        } ${isNarration ? 'italic text-muted' : 'text-ink/90'}`}
       >
         {isNarration ? (
           displayed

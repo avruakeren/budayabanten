@@ -21,7 +21,7 @@ export const REGIONS = [
       'Gerbang Kesultanan Banten. Di sini berdiri Masjid Agung Banten, Keraton Surosowan, dan Meriam Ki Amuk yang menjadi saksi kejayaan pelabuhan rempah Nusantara.',
     accent: '#C9A227',
     accentSoft: '#E8C766',
-    position: { x: 46, y: 31 },
+    position: { x: 50, y: 34 },
     cardId: 'ki-amuk',
     minigame: 'quiz',
     dialog: [
@@ -74,7 +74,7 @@ export const REGIONS = [
       'Di luar kota, Kabupaten Serang membentang dari sawah di kaki Gunung Karang hingga pesisir Anyer. Cagar Alam Pulau Dua menjadi persinggahan ribuan burung migran, sementara situs Banten Girang menyimpan lapisan sejarah sebelum kesultanan.',
     accent: '#8C7A3F',
     accentSoft: '#C9B36B',
-    position: { x: 53, y: 22 },
+    position: { x: 62, y: 22 },
     cardId: 'pulau-dua',
     minigame: 'coming-soon',
     dialog: [
@@ -127,7 +127,7 @@ export const REGIONS = [
       'Di kaki Pegunungan Kendeng, masyarakat Baduy menjaga pikukuh — aturan hidup yang mengikat manusia pada tanah, air, dan leluhur. Tenun, angklung, dan huma menjadi napas keseharian.',
     accent: '#6E8B6B',
     accentSoft: '#A8C29A',
-    position: { x: 73, y: 53 },
+    position: { x: 70, y: 58 },
     cardId: 'tenun-baduy',
     minigame: 'sort',
     dialog: [
@@ -180,7 +180,7 @@ export const REGIONS = [
       'Di ujung barat Pulau Jawa, Taman Nasional Ujung Kulon menjaga badak jawa — salah satu mamalia paling langka di bumi. Budaya pesisirnya hidup lewat rudat, golok, dan emping Menes.',
     accent: '#4E6E58',
     accentSoft: '#9DB98A',
-    position: { x: 37, y: 74 },
+    position: { x: 42, y: 72 },
     cardId: 'badak-jawa',
     minigame: 'memory',
     dialog: [
@@ -233,7 +233,7 @@ export const REGIONS = [
       'Dari Pelabuhan Merak, kapal-kapal menyeberang ke Sumatra setiap hari. Di kota industri ini, tradisi pesisir tetap hidup lewat gipang, silat, dan suara azan yang bercampur klakson kapal.',
     accent: '#B4552D',
     accentSoft: '#E0A08A',
-    position: { x: 19, y: 43 },
+    position: { x: 28, y: 42 },
     cardId: 'gipang',
     minigame: 'rhythm',
     dialog: [
@@ -286,7 +286,7 @@ export const REGIONS = [
       'Sungai Cisadane mengantar dagangan dan cerita ke jantung Kota Tangerang. Di Pasar Lama, klenteng tua, kerak telor, dan Tari Cokek hidup berdampingan dalam pergaulan Betawi-Tionghoa.',
     accent: '#A85A34',
     accentSoft: '#D89A76',
-    position: { x: 76, y: 26 },
+    position: { x: 78, y: 30 },
     cardId: 'cokek',
     minigame: 'coming-soon',
     dialog: [
@@ -339,7 +339,7 @@ export const REGIONS = [
       'Di antara kampus dan gedung kaca, tradisi Betawi masih dirawat di Tangerang Selatan. Gambang kromong, lenong, dan kecrek bergema dari panggung-panggung kayu kampung.',
     accent: '#5C6E7A',
     accentSoft: '#9DB2BD',
-    position: { x: 86, y: 35 },
+    position: { x: 88, y: 42 },
     cardId: 'gambang-kromong',
     minigame: 'coming-soon',
     dialog: [
@@ -392,7 +392,7 @@ export const REGIONS = [
       'Tambak-tambak di pesisir utara Kabupaten Tangerang memelihara bandeng yang menjadi salah satu ikon kuliner Banten. Sate bandeng lahir dari tangan-tangan nelayan dan ibu-ibu yang meracik bumbunya turun-temurun.',
     accent: '#4F6B57',
     accentSoft: '#97B39F',
-    position: { x: 91, y: 48 },
+    position: { x: 88, y: 62 },
     cardId: 'sate-bandeng',
     minigame: 'coming-soon',
     dialog: [
