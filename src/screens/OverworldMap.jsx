@@ -66,7 +66,7 @@ export function OverworldMap({ onOpenCodex }) {
   const activeMeta = statusLabel(activeStatus, activeRegion);
 
   return (
-    <div className="mx-auto w-full max-w-5xl px-5 pb-16 pt-24">
+    <div className="mx-auto w-full max-w-5xl px-5 pb-16 pt-12 sm:pt-16">
       <header className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="eyebrow">Peta perjalanan</p>

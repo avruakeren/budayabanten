@@ -13,7 +13,7 @@ export function VNStage({ region, line, completed = false, stars = 0, onBack, ch
       <VNBackground region={region} />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-paper/80 via-paper/5 to-ink/35" />
 
-      <div className="relative z-10 mx-auto flex min-h-[100dvh] w-full max-w-5xl flex-col px-5 pb-5 pt-20">
+      <div className="relative z-10 mx-auto flex min-h-[100dvh] w-full max-w-5xl flex-col px-5 pb-5 pt-12 sm:pt-14">
         <header className="flex items-start justify-between gap-4">
           <div className="min-w-0">
             <button
@@ -25,15 +25,9 @@ export function VNStage({ region, line, completed = false, stars = 0, onBack, ch
               Kembali ke peta
             </button>
 
-            <div className="mt-3 flex w-fit max-w-full flex-col rounded-md border border-line/80 bg-paper/85 px-3.5 py-2.5 shadow-soft backdrop-blur">
-              <p className="eyebrow">
-                Wilayah {String(region.order).padStart(2, '0')} · {region.era}
-              </p>
-              <h1 className="mt-1 font-display text-base font-semibold leading-snug text-ink sm:text-lg">
-                {region.title}
-              </h1>
-              <p className="mt-0.5 text-[11px] italic text-muted">{region.tagline}</p>
-            </div>
+            <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink/70">
+              Wilayah {String(region.order).padStart(2, '0')} · {region.title}
+            </p>
           </div>
 
           {completed ? (

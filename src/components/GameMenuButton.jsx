@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useGameState } from '../hooks/useGameState';
 import { CODEX_CARDS } from '../data/codexCards';
 import { audio } from '../lib/audio';
@@ -7,6 +7,15 @@ import { BookIcon, HomeIcon, MuteIcon, VolumeIcon, CloseIcon } from './Icons';
 export function GameMenuButton({ onOpenCodex }) {
   const { screen, collectedCards, audioMuted, dispatch } = useGameState();
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const handleKey = (event) => {
+      if (event.key === 'Escape') setOpen(false);
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [open]);
 
   const goHome = () => {
     audio.click();

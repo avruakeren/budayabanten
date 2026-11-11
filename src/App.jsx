@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 import { GameProvider, useGameState } from './hooks/useGameState';
 import { audio } from './lib/audio';
-import { Navbar } from './components/Navbar';
+// Navbar diganti GameMenuButton (tombol menu floating) di semua layar non-homepage.
 import { GameMenuButton } from './components/GameMenuButton';
 import { CodexModal } from './components/CodexModal';
 import { Homepage } from './screens/Homepage';
@@ -71,10 +71,8 @@ function GameDirector() {
 
   return (
     <div className="relative min-h-[100dvh]">
-      {screen === 'MINIGAME' ? (
+      {screen !== 'HOMEPAGE' ? (
         <GameMenuButton onOpenCodex={() => setCodexOpen(true)} />
-      ) : screen !== 'HOMEPAGE' ? (
-        <Navbar onOpenCodex={() => setCodexOpen(true)} />
       ) : null}
 
       <main>

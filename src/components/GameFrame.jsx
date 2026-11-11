@@ -4,7 +4,7 @@ import { ArrowLeftIcon } from './Icons';
 
 export function GameFrame({ region, title, subtitle, progress = 0, progressLabel, onExit, children }) {
   return (
-    <div className="min-h-[100dvh] pb-6 pt-16 sm:pb-12 sm:pt-24">
+    <div className="min-h-[100dvh] pb-6 pt-12 sm:pb-12 sm:pt-14">
       <div className="mx-auto w-full max-w-2xl px-4 sm:px-5">
         <button
           type="button"
