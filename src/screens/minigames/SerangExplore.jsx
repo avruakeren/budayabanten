@@ -69,7 +69,7 @@ export function SerangExplore({ region, card, onExit, onComplete }) {
       </div>
 
       {/* Canvas ilustrasi Banten Lama */}
-      <div className="relative mt-4 aspect-[16/9] w-full overflow-hidden rounded-lg border border-line bg-paper">
+      <div className="relative mt-3 aspect-[16/9] w-full max-h-[36vh] overflow-hidden rounded-lg border border-line bg-paper sm:mt-4 sm:max-h-none">
         <svg
           viewBox="0 0 100 56.25"
           preserveAspectRatio="xMidYMid slice"

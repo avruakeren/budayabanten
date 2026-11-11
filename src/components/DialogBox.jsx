@@ -78,7 +78,7 @@ export function DialogBox({
 
       <p
         className={`mt-6 min-h-[7rem] text-pretty font-display leading-[1.85] sm:min-h-[6rem] ${
-          isVn ? 'text-[18px] sm:text-[21px]' : 'text-[17px] sm:text-[19px]'
+          isVn ? 'text-[16px] sm:text-[21px]' : 'text-[16px] sm:text-[19px]'
         } ${isNarration ? 'italic text-muted' : 'text-ink/90'}`}
       >
         {isNarration ? (

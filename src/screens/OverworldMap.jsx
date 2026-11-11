@@ -85,7 +85,7 @@ export function OverworldMap({ onOpenCodex }) {
       </p>
 
       <section className="panel mt-6 overflow-hidden p-3 sm:p-4">
-        <div className="relative aspect-[10/8] w-full overflow-hidden rounded-lg border border-line bg-[#EFEBE1] sm:aspect-[10/7]">
+        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-line bg-[#EFEBE1] sm:aspect-[10/7]">
           <div
             className="absolute inset-0 opacity-70"
             style={{

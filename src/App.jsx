@@ -3,6 +3,7 @@ import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 import { GameProvider, useGameState } from './hooks/useGameState';
 import { audio } from './lib/audio';
 import { Navbar } from './components/Navbar';
+import { GameMenuButton } from './components/GameMenuButton';
 import { CodexModal } from './components/CodexModal';
 import { Homepage } from './screens/Homepage';
 import { Prologue } from './screens/Prologue';
@@ -70,7 +71,11 @@ function GameDirector() {
 
   return (
     <div className="relative min-h-[100dvh]">
-      {screen !== 'HOMEPAGE' ? <Navbar onOpenCodex={() => setCodexOpen(true)} /> : null}
+      {screen === 'MINIGAME' ? (
+        <GameMenuButton onOpenCodex={() => setCodexOpen(true)} />
+      ) : screen !== 'HOMEPAGE' ? (
+        <Navbar onOpenCodex={() => setCodexOpen(true)} />
+      ) : null}
 
       <main>
         <AnimatePresence mode="wait" initial={false}>

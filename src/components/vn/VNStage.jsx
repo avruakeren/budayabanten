@@ -43,7 +43,7 @@ export function VNStage({ region, line, completed = false, stars = 0, onBack, ch
           ) : null}
         </header>
 
-        <div className="relative min-h-[220px] flex-1 sm:min-h-[280px]">
+        <div className="relative min-h-[160px] flex-1 sm:min-h-[280px]">
           <AnimatePresence>
             {!isNarration ? (
               <motion.div
@@ -67,7 +67,7 @@ export function VNStage({ region, line, completed = false, stars = 0, onBack, ch
           </AnimatePresence>
         </div>
 
-        <div className="relative z-20 mt-2 rounded-xl border border-line/80 bg-paper/95 p-5 shadow-[0_20px_60px_-34px_rgba(27,25,22,0.55)] backdrop-blur sm:p-6">
+        <div className="relative z-20 mt-2 rounded-xl border border-line/80 bg-paper/95 p-4 shadow-[0_20px_60px_-34px_rgba(27,25,22,0.55)] backdrop-blur sm:p-6">
           <span className="absolute inset-x-6 top-0 h-px bg-accent/40" aria-hidden="true" />
           {children}
         </div>
