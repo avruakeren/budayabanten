@@ -69,7 +69,7 @@ export function Homepage() {
         style={{ x: backdropX, y: backdropY }}
       >
         <motion.img
-          src="/assets/backgrounds/pandeglang.webp"
+          src="assets/backgrounds/pandeglang.webp"
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
           style={{ filter: 'saturate(0.4) brightness(0.92)' }}

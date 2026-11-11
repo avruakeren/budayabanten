@@ -255,7 +255,7 @@ export function VNPortrait({ speaker, portrait, emotion = 'happy', className = '
   if (sprite) {
     return (
       <img
-        src={`/assets/sprites/${sprite}-${emotion}.webp`}
+        src={`assets/sprites/${sprite}-${emotion}.webp`}
         alt={`Potret ${speaker ?? 'tokoh'}`}
         className={`${className} object-contain`}
         loading="eager"

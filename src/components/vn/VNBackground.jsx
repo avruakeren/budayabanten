@@ -402,7 +402,7 @@ export function VNBackground({ region }) {
     return (
       <div className="absolute inset-0" aria-hidden="true">
         <img
-          src={`/assets/backgrounds/${bg}`}
+          src={`assets/backgrounds/${bg}`}
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
           loading="eager"
