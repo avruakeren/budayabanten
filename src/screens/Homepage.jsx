@@ -103,24 +103,11 @@ export function Homepage() {
       {/* Konten editorial langsung di atas background, tanpa panel/card */}
       <div className="relative mx-auto flex min-h-[100dvh] w-full max-w-5xl flex-col px-5 pb-8 pt-12 sm:pt-16">
         <div className="flex flex-1 flex-col justify-center py-14">
-          <Reveal delay={0} reduceMotion={reduceMotion}>
-            <p className="eyebrow">Delapan Wilayah · Delapan Cerita</p>
-          </Reveal>
-
           <Reveal delay={0.08} reduceMotion={reduceMotion}>
             <h1 className="mt-5 font-display text-[clamp(2.5rem,9vw,7.5rem)] font-semibold leading-[0.92] tracking-[-0.02em] text-ink">
               Yuk, Jelajahi
               <br />
-              <span className="relative inline-block italic text-accent">
-                Budaya Banten!
-                <motion.span
-                  aria-hidden="true"
-                  className="absolute inset-x-0 -bottom-1.5 h-[0.08em] origin-left bg-accent/60"
-                  initial={reduceMotion ? false : { scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 0.8, delay: 0.65, ease: EASE }}
-                />
-              </span>
+              <span className="relative inline-block italic text-accent">Budaya Banten!</span>
             </h1>
           </Reveal>
 
@@ -133,15 +120,25 @@ export function Homepage() {
 
           <Reveal delay={0.28} reduceMotion={reduceMotion}>
             <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
-              <Button
-                onClick={start}
-                className="h-12 px-6 text-[15px]"
-                trailing={
-                  <ArrowRightIcon className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+              <motion.div
+                className="inline-block"
+                animate={reduceMotion ? { scale: 1 } : { scale: [1, 1.03, 1] }}
+                transition={
+                  reduceMotion
+                    ? { duration: 0 }
+                    : { duration: 3, repeat: Infinity, ease: 'easeInOut' }
                 }
               >
-                {hasStarted ? 'Lanjutkan Petualangan' : 'Ayo Mulai!'}
-              </Button>
+                <Button
+                  onClick={start}
+                  className="h-12 px-6 text-[15px]"
+                  trailing={
+                    <ArrowRightIcon className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                  }
+                >
+                  {hasStarted ? 'Lanjutkan Petualangan' : 'Ayo Mulai!'}
+                </Button>
+              </motion.div>
 
               {hasStarted ? (
                 <button
