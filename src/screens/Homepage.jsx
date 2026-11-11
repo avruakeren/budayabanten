@@ -29,6 +29,7 @@ function Reveal({ children, delay = 0, reduceMotion = false, className = '' }) {
 export function Homepage() {
   const { hasStarted, dispatch } = useGameState();
   const [confirmNew, setConfirmNew] = useState(false);
+  const [showIntro, setShowIntro] = useState(false);
   const reduceMotion = useReducedMotion();
 
   const pointerX = useMotionValue(0);
@@ -47,14 +48,21 @@ export function Homepage() {
     dispatch({ type: 'START_NEW' });
   };
 
-  const start = () => {
+  const beginGame = () => {
+    setShowIntro(false);
     audio.startBgm();
     audio.click();
+    dispatch({ type: 'START_NEW' });
+  };
+
+  const start = () => {
+    audio.click();
     if (hasStarted) {
+      audio.startBgm();
       dispatch({ type: 'CONTINUE' });
       return;
     }
-    dispatch({ type: 'START_NEW' });
+    setShowIntro(true);
   };
 
   return (
@@ -152,6 +160,28 @@ export function Homepage() {
 
         </div>
       </div>
+
+      {/* Video intro */}
+      {showIntro ? (
+        <div className="fixed inset-0 z-[100] bg-ink">
+          <video
+            src="intro.mp4"
+            autoPlay
+            playsInline
+            className="h-full w-full object-cover"
+            onEnded={beginGame}
+            onError={beginGame}
+          />
+          <button
+            type="button"
+            onClick={beginGame}
+            className="absolute right-4 top-4 inline-flex items-center gap-2 rounded-md border border-paper/40 bg-ink/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-paper backdrop-blur transition-colors hover:bg-ink/80"
+          >
+            Lewati
+            <ArrowRightIcon className="h-4 w-4" />
+          </button>
+        </div>
+      ) : null}
 
       <Modal
         open={confirmNew}
