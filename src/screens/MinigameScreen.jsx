@@ -3,14 +3,14 @@ import { useGameState } from '../hooks/useGameState';
 import { getRegion } from '../data/regions';
 import { getCard } from '../data/codexCards';
 import { audio } from '../lib/audio';
-import { SerangQuiz } from './minigames/SerangQuiz';
+import { SerangExplore } from './minigames/SerangExplore';
 import { BaduySort } from './minigames/BaduySort';
 import { PandeglangMemory } from './minigames/PandeglangMemory';
 import { CilegonSimon } from './minigames/CilegonSimon';
 import { ComingSoon } from './minigames/ComingSoon';
 
 const GAMES = {
-  quiz: SerangQuiz,
+  explore: SerangExplore,
   sort: BaduySort,
   memory: PandeglangMemory,
   rhythm: CilegonSimon,

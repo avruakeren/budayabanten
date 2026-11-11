@@ -1,3 +1,41 @@
+export const SERANG_HOTSPOTS = [
+  {
+    id: 'menara',
+    label: 'Menara Masjid Agung',
+    x: 52,
+    y: 26,
+    fact: 'Menara setinggi ±30 meter dibangun sekitar tahun 1632, sengaja menyerupai mercusuar agar kapal dagang dari Selat Sunda tahu ke mana harus berlabuh.',
+  },
+  {
+    id: 'masjid',
+    label: 'Masjid Agung Banten',
+    x: 46,
+    y: 44,
+    fact: 'Masjid Agung Banten didirikan pada masa Kesultanan Banten. Arsitekturnya memadukan gaya Jawa, Tionghoa, dan Eropa — jejak pelabuhan yang terbuka pada dunia.',
+  },
+  {
+    id: 'keraton',
+    label: 'Keraton Surosowan',
+    x: 28,
+    y: 62,
+    fact: 'Keraton Surosowan didirikan pada masa Sultan Maulana Hasanuddin dan menjadi pusat pemerintahan Kesultanan Banten. Kini tinggal reruntuhan bata, gapura, dan kolam.',
+  },
+  {
+    id: 'kiamuk',
+    label: 'Meriam Ki Amuk',
+    x: 40,
+    y: 74,
+    fact: 'Ki Amuk adalah meriam perunggu legendaris dari abad ke-16 yang berdiri di depan Keraton Surosowan. Ia menjadi lambang kekuatan maritim Banten.',
+  },
+  {
+    id: 'vihara',
+    label: 'Vihara Avalokitesvara',
+    x: 74,
+    y: 58,
+    fact: 'Vihara Avalokitesvara adalah jejak Pecinan Banten — kampung etnis Tionghoa yang tumbuh karena perdagangan rempah di pelabuhan Banten Lama.',
+  },
+];
+
 export const SERANG_QUESTIONS = [
   {
     id: 'masjid',

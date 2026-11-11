@@ -24,7 +24,7 @@ export const REGIONS = [
     position: { x: 50, y: 34 },
     cardId: 'ki-amuk',
     background: 'serang.webp',
-    minigame: 'quiz',
+    minigame: 'explore',
     dialog: [
       {
         speaker: 'Narator',
